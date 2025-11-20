@@ -1,52 +1,110 @@
-# Debian Home Server
+<div id="top">
 
-Personal Debian-based home server running on repurposed laptop hardware.  
-Used for learning Linux, networking, and infrastructure by hosting services on my local network.
+<!-- HEADER STYLE: CLASSIC -->
+<div align="center">
 
-## 🖥 Hardware
 
-- Old laptop (Debian CLI only, no GUI)
-- Connected via Ethernet to home router (NBN HFC)
-- Runs 24/7 as a headless server
+# DEBIAN-HOME-SERVER
 
-## 🧠 Goals of this project
+<em>Empowering Seamless, Secure Home Server Automation</em>
 
-- Learn and practice real-world Linux server administration
-- Manage a headless Debian server over SSH
-- Experiment with networking (static IP, DHCP, local DNS ideas)
-- Host services for my home network (file access, media, tooling)
-- Treat home as a mini–data centre
+<!-- BADGES -->
+<img src="https://img.shields.io/github/last-commit/shreeyanshujha/debian-home-server?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+<img src="https://img.shields.io/github/languages/top/shreeyanshujha/debian-home-server?style=flat&color=0080ff" alt="repo-top-language">
+<img src="https://img.shields.io/github/languages/count/shreeyanshujha/debian-home-server?style=flat&color=0080ff" alt="repo-language-count">
 
-## 🏗 Current Setup
+<em>Built with the tools and technologies:</em>
 
-**OS:** Debian (CLI only)  
-**Access:** SSH only (password login disabled, key-based recommended)  
-**Network:**
-- Static IP on LAN (e.g. `192.168.1.10`)
-- Connected via Ethernet to NBN HFC router
-- Used as a base for future VLAN and 10Gbps-ready lab
+<img src="https://img.shields.io/badge/Markdown-000000.svg?style=flat&logo=Markdown&logoColor=white" alt="Markdown">
+<img src="https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=flat&logo=GNU-Bash&logoColor=white" alt="GNU%20Bash">
 
-## 🔧 Services / Uses
+</div>
+<br>
 
-Right now the server is used for:
+---
 
-- Remote shell access (SSH)
-- File management and backups
-- Experimenting with:
-  - systemd services
-  - Bash scripts for maintenance
-  - Basic monitoring/log checking
-  - Network troubleshooting tools (ping, traceroute, etc.)
+## Table of Contents
 
-Planned additions:
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [Testing](#testing)
 
-- Ad-blocking/local DNS (Pi-hole or AdGuard Home)
-- Simple web dashboards / self-hosted tools
-- Central logging or monitoring stack
+---
 
-## 📂 Repo Structure
+## Overview
 
-```text
-scripts/        # Bash scripts for maintenance & automation
-config/         # Systemd units, config notes, and hardening docs
-notes/          # High-level notes about services and future plans
+Debian-home-server is a versatile toolkit that automates essential maintenance and management tasks for your Debian-based home server. It helps keep your system secure, up-to-date, and reliable, while simplifying configuration and troubleshooting.
+
+**Why Debian-home-server?**
+
+This project aims to streamline server operations and support learning Linux administration. The core features include:
+
+- 🛠️ **Automated Upgrade Scripts:** Keep your system current by automating package updates, upgrades, and cleanup.
+- 🔒 **Reliable Backup Automation:** Safeguard user data with scheduled, seamless backups to remote locations.
+- ⚙️ **Configuration & Service Management:** Simplify server setup, service control, and troubleshooting.
+- 🌐 **Network Troubleshooting Tools:** Facilitate diagnosing network issues to ensure smooth connectivity.
+- 🚀 **Learning & Experimentation:** Designed to support hands-on Linux administration and local service hosting.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+This project requires the following dependencies:
+
+- **Programming Language:** Shell
+- **Package Manager:** Bash
+
+### Installation
+
+Build debian-home-server from the source and install dependencies:
+
+1. **Clone the repository:**
+
+    ```sh
+    ❯ git clone https://github.com/shreeyanshujha/debian-home-server
+    ```
+
+2. **Navigate to the project directory:**
+
+    ```sh
+    ❯ cd debian-home-server
+    ```
+
+3. **Install the dependencies:**
+
+**Using [bash](https://www.gnu.org/software/bash/):**
+
+```sh
+❯ chmod +x {entrypoint}
+```
+
+### Usage
+
+Run the project with:
+
+**Using [bash](https://www.gnu.org/software/bash/):**
+
+```sh
+./{entrypoint}
+```
+
+### Testing
+
+Debian-home-server uses the {__test_framework__} test framework. Run the test suite with:
+
+**Using [bash](https://www.gnu.org/software/bash/):**
+
+```sh
+bats *.bats
+```
+
+---
+
+<div align="left"><a href="#top">⬆ Return</a></div>
+
+---
